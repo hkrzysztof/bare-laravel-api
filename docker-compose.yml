@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  myapi:
+    tty: true
+    image: docker.io/library/nodblaravel
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/app
+    privileged: true
+    environment:
+      - COMPOSER_MEMORY_LIMIT=-1
